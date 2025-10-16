@@ -29,7 +29,7 @@ const loginSchema = z.object({
   password: z
     .string()
     .min(8, { message: "Password must be at least 8 characters." }),
-  remember: z.boolean().default(false),
+  remember: z.boolean(),
 })
 
 type LoginFormValues = z.infer<typeof loginSchema>
